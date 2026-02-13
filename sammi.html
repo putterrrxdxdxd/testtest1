@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>tupitupi</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: "Comic Sans MS", sans-serif;
+            margin-top: 100px;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+        h2 {
+            font-size: 25px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            margin: 20px;
+            cursor: pointer;
+            border: none;
+        }
+
+        #yesBtn {
+            background-color: #f850d1;
+            color: white;
+        }
+
+        #noBtn {
+            background-color: #949494;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>hello sammi tupi</h1>
+    <h1>will you accept my offering to be my valentine?</h1>
+    <h2> or whatevs i dont even carcar</h2>
+    <h2> you can click no for all i know i dont carcar</h2>
+
+
+    <button id="yesBtn">Yes </button>
+    <button id="noBtn">No </button>
+
+    <script>
+        const noBtn = document.getElementById("noBtn");
+        const yesBtn = document.getElementById("yesBtn");
+
+    
+        noBtn.addEventListener("mouseover", () => {
+            const maxX = window.innerWidth - noBtn.offsetWidth;
+            const maxY = window.innerHeight - noBtn.offsetHeight;
+
+            const randomX = Math.random() * maxX;
+            const randomY = Math.random() * maxY;
+
+            noBtn.style.left = randomX + "px";
+            noBtn.style.top = randomY + "px";
+        });
+
+        yesBtn.addEventListener("click", () => {
+            document.body.innerHTML = `
+                <h1>Yea, well I mean theres no no option what were you thinking?</h1>
+                <p>kidding. tupi ily</p>
+            `;
+        });
+    </script>
+
+</body>
+</html>
